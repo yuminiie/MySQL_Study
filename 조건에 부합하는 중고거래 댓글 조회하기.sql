@@ -5,9 +5,9 @@ SELECT
     R.WRITER_ID, 
     R.CONTENTS, 
     DATE_FORMAT(R.CREATED_DATE, '%Y-%m-%d') AS CREATED_DATE
-    from USED_GOODS_BOARD B
-        join USED_GOODS_REPLY R
-            on B.BOARD_ID = R.BOARD_ID
-    where B.CREATED_DATE like '2022-10-%'
-    order by R.CREATED_DATE, B.TITLE;
+    FROM USED_GOODS_BOARD B
+        JOIN USED_GOODS_REPLY R
+            ON B.BOARD_ID = R.BOARD_ID
+    where B.CREATED_DATE LIKE '2022-10-%'
+    ORDER BY R.CREATED_DATE, B.TITLE;
             
