@@ -1,4 +1,4 @@
 SELECT ANIMAL_ID, NAME FROM ANIMAL_INS 
 WHERE ANIMAL_TYPE = 'Dog'
-    and lower(name) LIKE '%el%'
+    AND LOWER(NAME) LIKE '%el%'
         ORDER BY NAME;
