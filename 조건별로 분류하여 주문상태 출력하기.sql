@@ -1,11 +1,11 @@
 SELECT 
     ORDER_ID, 
     PRODUCT_ID, 
-    ifnull(DATE_FORMAT(OUT_DATE, '%Y-%m-%d'), null) as OUT_DATE,  
-    case
-        when OUT_DATE is null then '출고미정' 
-        when OUT_DATE <= date('2022-05-01') then '출고완료'
-        else '출고대기'
-    end as 출고여부
-    from FOOD_ORDER
-order by ORDER_ID;
+    IFNULL(DATE_FORMAT(OUT_DATE, '%Y-%m-%d'), NULL) AS OUT_DATE,  
+    CASE
+        WHEN OUT_DATE IS NULL THEN '출고미정' 
+        WHEN OUT_DATE <= date('2022-05-01') THEN '출고완료'
+        ELSE '출고대기'
+    END AS 출고여부
+    FROM FOOD_ORDER
+ORDER BY ORDER_ID;
